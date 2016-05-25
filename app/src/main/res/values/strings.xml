@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">pinkRoccade</string>
+    <string name="etPassword">password</string>
+    <string name="etUsername">Username</string>
+    <string name="tvLogIn">Vul uw gebruikersnaam en wachtwoord in</string>
+    <string name="btnLogIn">Log In</string>
+    <string name="tvRapportageNaam">Testy von Testerino</string>
+</resources>
