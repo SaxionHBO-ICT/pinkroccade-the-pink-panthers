@@ -1,18 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:weightSum="1">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="78dp">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="29dp"
-        android:text="@string/tvRapportageNaam"
-        android:id="@+id/tvRapportageNaam"
-        android:textSize="23dp" />
+        android:layout_height="wrap_content">
 
-    </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvRapportageNaam"
+            android:layout_width="match_parent"
+            android:layout_height="29dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:text="@string/tvRapportageNaam"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/tvRapportageAdres"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRapportageNaam"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:text="@string/tvRapportageAdres"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tvRapportageTijd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/tvRapportageTijd"
+            android:textSize="20dp" />
+
+
+    </RelativeLayout>
+
 </LinearLayout>
