@@ -5,4 +5,6 @@
     <string name="tvLogIn">Vul uw gebruikersnaam en wachtwoord in</string>
     <string name="btnLogIn">Log In</string>
     <string name="tvRapportageNaam">Testy von Testerino</string>
+    <string name="tvRapportageAdres">Adres</string>
+    <string name="tvRapportageTijd">13:30</string>
 </resources>
