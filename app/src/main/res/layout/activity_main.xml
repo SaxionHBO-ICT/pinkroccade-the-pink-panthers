@@ -24,7 +24,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:text="@string/etPassword"
         android:ems="10"
         android:id="@+id/etPassword"
         android:layout_below="@+id/etUsername"

@@ -16,8 +16,7 @@
             android:layout_height="29dp"
             android:paddingLeft="5dp"
             android:paddingTop="5dp"
-            android:text="@string/tvRapportageNaam"
-            android:textSize="23dp" />
+            android:textSize="21dp" />
 
         <TextView
             android:id="@+id/tvRapportageAdres"
@@ -26,7 +25,6 @@
             android:layout_below="@+id/tvRapportageNaam"
             android:paddingLeft="5dp"
             android:paddingTop="5dp"
-            android:text="@string/tvRapportageAdres"
             android:textSize="20dp" />
 
         <TextView
@@ -37,7 +35,7 @@
             android:paddingRight="10dp"
             android:paddingTop="10dp"
             android:text="@string/tvRapportageTijd"
-            android:textSize="20dp" />
+            android:textSize="16dp" />
 
 
     </RelativeLayout>
