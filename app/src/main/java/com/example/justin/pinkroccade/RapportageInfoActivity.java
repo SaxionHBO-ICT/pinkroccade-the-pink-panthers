@@ -25,7 +25,7 @@ public class RapportageInfoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rapportageinfo);
 
         tvProdNr = (TextView) findViewById(R.id.tvProdNr);
-        tvHabNr = (TextView) findViewById(R.id.tvHabNaam);
+        tvHabNr = (TextView) findViewById(R.id.tvHabNr);
 
         habBar = (ProgressBar) findViewById(R.id.pbHandenAanBed);
         prodBar = (ProgressBar) findViewById(R.id.pbProductivity);
