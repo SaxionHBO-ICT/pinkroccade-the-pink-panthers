@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.justin.pinkroccade.MainActivity">
+    tools:context="com.example.justin.pinkroccade.MainActivity"
+    android:background="#ffffff">
 
     <EditText
         android:layout_width="wrap_content"
@@ -17,8 +18,9 @@
         android:ems="10"
         android:id="@+id/etUsername"
         android:selectAllOnFocus="true"
-        android:layout_below="@+id/tvLogIn"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/ivPinkLogo"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -27,14 +29,16 @@
         android:ems="10"
         android:id="@+id/etPassword"
         android:layout_below="@+id/etUsername"
-        android:layout_alignParentStart="true" />
+        android:layout_alignStart="@+id/etUsername" />
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/tvLogIn"
-        android:id="@+id/tvLogIn"
-        android:textSize="18dp" />
+        android:id="@+id/ivPinkLogo"
+        android:textSize="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/etUsername" />
 
     <Button
         android:layout_width="wrap_content"
@@ -42,5 +46,5 @@
         android:text="@string/btnLogIn"
         android:id="@+id/btnLogIn"
         android:layout_below="@+id/etPassword"
-        android:layout_alignEnd="@+id/etPassword" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

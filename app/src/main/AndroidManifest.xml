@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:label="@string/app_name" android:name=".ListActivity"/>
+        <activity android:label="@string/app_name" android:name=".RapportageInfoActivity"/>
     </application>
 
 </manifest>

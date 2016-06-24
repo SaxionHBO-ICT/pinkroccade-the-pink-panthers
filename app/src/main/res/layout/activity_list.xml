@@ -6,22 +6,22 @@
 
 
 
-    <ListView
-        android:id="@+id/listView"
-        android:layout_width="match_parent"
-        android:layout_height="420dp" />
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="450dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="@string/btnMeterOne"
-        android:id="@+id/btnMeterOne"
+        android:id="@+id/btnRapportage"
         android:layout_marginStart="54dp"
-        android:layout_alignTop="@+id/btnMeterTwo"
         android:layout_alignParentStart="true" />
 
     <Button
@@ -29,11 +29,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:text="@string/btnMeterTwo"
-        android:id="@+id/btnMeterTwo"
+        android:id="@+id/btnUitloggen"
         android:layout_gravity="right"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/btnMeterOne"
-        android:layout_marginStart="40dp" />
+        android:layout_toEndOf="@+id/btnRapportage" />
 
     </RelativeLayout>
 </LinearLayout>

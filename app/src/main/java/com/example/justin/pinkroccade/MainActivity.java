@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -24,32 +25,48 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         final EditText etUsername = (EditText) findViewById(R.id.etUsername);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
-        final Button btnLogIn = (Button) findViewById(R.id.btnLogIn);
+
+        Button btnLogIn = (Button) findViewById(R.id.btnLogIn);
+
+        ImageView ivPinkLogo = (ImageView) findViewById(R.id.ivPinkLogo);
+        ivPinkLogo.setImageResource(R.drawable.logo_healthcare);
+
         DataProcessor res = new DataProcessor();
 
+        RapportageInfo rapportageInfo = new RapportageInfo(3, 70);
+
+        // Adding dummmy data to the list to display later.
         res.addGebruiker(new Gebruiker("test", "wachtwoord"));
-        res.addRapportage(new Rapportage("H. Kolkman1", "De Brink 25", new Date()));
-        res.addRapportage(new Rapportage("H. Kolkman2", "De Brink 26", new Date()));
-        res.addRapportage(new Rapportage("H. Kolkman3", "De Brink 27", new Date()));
-        res.addRapportage(new Rapportage("H. Kolkman4", "De Brink 28", new Date()));
-        res.addRapportage(new Rapportage("H. Kolkman5", "De Brink 29", new Date()));
-        res.addRapportage(new Rapportage("H. Kolkman6", "De Brink 30", new Date()));
+        res.addRapportage(new Rapportage("H. Kolkman", "De Brink 25", "08:20"));
+        res.addRapportage(new Rapportage("W. Kanon", "Laarstraat 71", "08:45"));
+        res.addRapportage(new Rapportage("F. Visser", "Schoolstraat 42", "09:25"));
+        res.addRapportage(new Rapportage("H. de Bruin", "Lange Kade 4", "10:00"));
+        res.addRapportage(new Rapportage("N. van de Berg", "Kerklaan 12", "11:20"));
+        res.addRapportage(new Rapportage("F. Schrijver", "Snipperlingsdijk 1", "12:00"));
+        res.addRapportage(new Rapportage("P. Witteberg", "Snipperlingsdijk 1" ," 12:40" ));
+        res.addRapportage(new Rapportage("C. Balster", "Alphons Diepenbrocklaan 20" , " 13:10" ));
 
-        gebruikers = res.getGebruikerslist();
+        gebruikers = res.getGebruikersList();
 
+        // Makes sure there is a button.
         if (btnLogIn != null) {
             btnLogIn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    System.out.println("hallo");
+                    // Checking if the user can be found in the userlist and if so, and the text that
+                    // was entered in the field equals the ones found in the list, the user is brought
+                    // to the next activity.
                     for (Gebruiker gebruiker : gebruikers) {
                         if (etUsername.getText().toString().equalsIgnoreCase(gebruiker.getUsername())) {
                             if (etPassword.getText().toString().equalsIgnoreCase(gebruiker.getPassword())) {
                                 Intent myIntent = new Intent(MainActivity.this, ListActivity.class);
                                 MainActivity.this.startActivity(myIntent);
                             }
+                            // Show the user their log-in data was not correct.
+                            else Toast.makeText(MainActivity.this, "Incorrecte inloggegevens", Toast.LENGTH_SHORT).show();
                         } else Toast.makeText(MainActivity.this, "Incorrecte inloggegevens", Toast.LENGTH_SHORT).show();
                     }
 

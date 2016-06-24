@@ -8,39 +8,52 @@ import java.util.Date;
 public class Rapportage {
 
     private String rapportageNaam;
-    private int aantMedewerkers;
     private String clientAdres;
-    private int medewerkerProductiviteit;
     private String medewerkerNaam;
-    private Date datum;
+    private String datum;
 
-    public Rapportage(String rapportageNaam, String clientAdres, Date datum) {
+    /**
+     * Constructor for a rapportage which are shown in the looplijst.
+     * @param rapportageNaam
+     * @param clientAdres
+     * @param tijd
+     */
+    public Rapportage(String rapportageNaam, String clientAdres, String tijd) {
         this.rapportageNaam = rapportageNaam;
         this.clientAdres = clientAdres;
-        this.datum = datum;
+        this.datum = tijd;
     }
 
+    /**
+     *
+     * @return rapportageNaam.
+     */
     public String getRapportageNaam() {
         return rapportageNaam;
     }
 
-    public int getAantMedewerkers() {
-        return aantMedewerkers;
-    }
-
+    /**
+     *
+     * @return clientAdres.
+     */
     public String getClientAdres() {
         return clientAdres;
     }
 
-    public int getMedewerkerProductiviteit() {
-        return medewerkerProductiviteit;
-    }
-
+    /**
+     *
+     * @return medewerkerNaam.
+     */
     public String getMedewerkerNaam() {
         return medewerkerNaam;
     }
 
-    public Date getDatum() {
+    /**
+     *
+     * @return datum.
+     */
+    public String getTijd() {
         return datum;
     }
+
 }

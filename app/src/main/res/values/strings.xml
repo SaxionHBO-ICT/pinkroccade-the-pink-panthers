@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">pinkRoccade</string>
+    <string name="app_name">Pink Roccade</string>
     <string name="etPassword">password</string>
     <string name="etUsername">Username</string>
 
     <string name="btnLogIn">Log In</string>
-    <string name="btnMeterOne">Productivity</string>
-    <string name="btnMeterTwo">Handen aan bed</string>
+    <string name="btnMeterOne">Rapportage Info</string>
+    <string name="btnMeterTwo">Uitloggen</string>
 
     <string name="tvLogIn">Vul uw gebruikersnaam en wachtwoord in</string>
     <string name="tvRapportageNaam">Testy von Testerino</string>
